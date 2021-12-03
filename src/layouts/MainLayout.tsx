@@ -10,9 +10,13 @@ import {
   DialogTitle,
   Divider,
   Drawer,
+  FormControl,
   IconButton,
+  InputLabel,
   Link,
+  MenuItem,
   Paper,
+  Select,
   TextField,
   Toolbar,
   Typography,
@@ -20,6 +24,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import "./MainLayout.scss";
 import Search from "components/SearchBar";
+import i18next from "i18next";
 import logo from "../images/logo.png";
 import twitterLogo from "../images/twitter-logo.png";
 import facebookLogo from "../images/facebook-logo.png";
@@ -28,6 +33,14 @@ import gmailLogo from "../images/gmail-logo.png";
 const MainLayout: React.FC = ({ children }) => {
   const [drawerState, setDrawerState] = useState(false);
   const [dialogState, setDialogState] = useState(false);
+  const [language, setLanguage] = useState("fr");
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const handleLanguageChange = (event): void => {
+    setLanguage(event.target.value);
+    i18next.changeLanguage(event.target.value);
+  };
 
   const handleClickOpen = (): void => {
     setDialogState(true);
@@ -87,6 +100,19 @@ const MainLayout: React.FC = ({ children }) => {
             <img className="logos" src={gmailLogo} alt="gmail logo" />
           </a>
         </Box>
+        <FormControl>
+          <InputLabel id="language-label">Language</InputLabel>
+          <Select
+            labelId="language-label"
+            id="language-select"
+            value={language}
+            label="Language"
+            onChange={handleLanguageChange}
+          >
+            <MenuItem value="fr">Français</MenuItem>
+            <MenuItem value="en">English</MenuItem>
+          </Select>
+        </FormControl>
         <Typography onClick={handleClickOpen} sx={{ marginLeft: "auto" }}>
           Connexion Admin
         </Typography>

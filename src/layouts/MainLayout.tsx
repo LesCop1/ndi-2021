@@ -4,7 +4,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./MainLayout.scss";
 import Search from "components/SearchBar";
 import logo from "../images/logo.png";
-import DefaultLayout from "./DefaultLayout";
 
 const MainLayout: React.FC = ({ children }) => {
   const [drawerState, setDrawerState] = useState(false);
@@ -14,7 +13,7 @@ const MainLayout: React.FC = ({ children }) => {
   };
 
   return (
-    <DefaultLayout>
+    <>
       <AppBar className="MainLayout">
         <Toolbar>
           <IconButton onClick={() => toggleDrawer()}>
@@ -36,14 +35,15 @@ const MainLayout: React.FC = ({ children }) => {
         </Toolbar>
       </AppBar>
       <div className="toolbar-offset" />
-      {children}
+      <div className="content">{children}</div>
+
       <Container className="footer">footer</Container>
       <Drawer anchor="left" open={drawerState} onClose={() => toggleDrawer()}>
         <div>a</div>
         <div>b</div>
         <div>c</div>
       </Drawer>
-    </DefaultLayout>
+    </>
   );
 };
 

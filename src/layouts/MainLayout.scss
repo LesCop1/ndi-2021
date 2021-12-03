@@ -27,9 +27,24 @@
 }
 
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .footer {
-    flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.Drawer {
+  text-align: center;
+
+  .drawer-logo {
+      margin: 2* $spacing 0;
+      width: 100px;
+      height: 100px;
+  }
+
+  .drawer-item {
+    text-decoration: none !important;
+    margin: 2 * $spacing 0;
+  }
 }

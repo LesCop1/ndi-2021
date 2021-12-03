@@ -113,6 +113,7 @@ const MainLayout: React.FC = ({ children }) => {
           >
             <MenuItem value="fr">{t("mainLayout-3")}</MenuItem>
             <MenuItem value="en">{t("mainLayout-4")}</MenuItem>
+            <MenuItem value="ar">{t("mainLayout-20")}</MenuItem>
           </Select>
         </FormControl>
         <Typography onClick={handleClickOpen} sx={{ marginLeft: "auto" }}>

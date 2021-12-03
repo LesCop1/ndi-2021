@@ -77,9 +77,15 @@ const MainLayout: React.FC = ({ children }) => {
             <Typography>Dev Nuit de l&apos;Info</Typography>
           </Link>
           <Divider />
-          <img className="logos" src={twitterLogo} alt="twitter logo" />
-          <img className="logos" src={facebookLogo} alt="facebook logo" />
-          <img className="logos" src={gmailLogo} alt="gmail logo" />
+          <a href="https://twitter.com/boutelierphili1">
+            <img className="logos" src={twitterLogo} alt="twitter logo" />
+          </a>
+          <a href="https://www.facebook.com/groups/938396409644949">
+            <img className="logos" src={facebookLogo} alt="facebook logo" />
+          </a>
+          <a href="mailto:sauveteurdudunkerquois@gmail.com">
+            <img className="logos" src={gmailLogo} alt="gmail logo" />
+          </a>
         </Box>
         <Typography onClick={handleClickOpen} sx={{ marginLeft: "auto" }}>
           Connexion Admin

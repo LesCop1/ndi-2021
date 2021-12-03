@@ -1,7 +1,8 @@
-import { Typography, Container } from "@mui/material";
+import { Typography, Container, Link } from "@mui/material";
 import MainLayout from "layouts/MainLayout";
 import React from "react";
 import "./Home.scss";
+import wave from "../images/waveLogo.png";
 
 const Home: React.FC = () => (
   <MainLayout>
@@ -29,6 +30,13 @@ const Home: React.FC = () => (
           chercher? Il n’y a à cela aucun mérite…”
         </Typography>
       </Container>
+      <br />
+      <Container className="center">
+        <img src={wave} alt="Vague" className="waveLogo" />
+      </Container>
+      <Link className="center" href="https://sauveteurdudunkerquois.fr/bosa-0257h/">
+        <Typography>Arsène Busso</Typography>
+      </Link>
     </div>
   </MainLayout>
 );

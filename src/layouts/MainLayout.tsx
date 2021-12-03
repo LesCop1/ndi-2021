@@ -29,11 +29,13 @@ import logo from "../images/logo.png";
 import twitterLogo from "../images/twitter-logo.png";
 import facebookLogo from "../images/facebook-logo.png";
 import gmailLogo from "../images/gmail-logo.png";
+import { useTranslation } from "react-i18next";
 
 const MainLayout: React.FC = ({ children }) => {
   const [drawerState, setDrawerState] = useState(false);
   const [dialogState, setDialogState] = useState(false);
   const [language, setLanguage] = useState("fr");
+  const { t } = useTranslation();
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -67,11 +69,11 @@ const MainLayout: React.FC = ({ children }) => {
             </Link>
             <Box className="title-text">
               <Typography variant="h5" component="div">
-                Sauveteur du dunkerquois
+                {t("mainLayout")}
               </Typography>
               <Typography variant="subtitle1" component="div">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                270 ans d'histoire
+                {t("mainLayout-1")}
               </Typography>
             </Box>
           </Box>
@@ -83,11 +85,11 @@ const MainLayout: React.FC = ({ children }) => {
       <Paper elevation={8} className="footer">
         <Box className="holder">
           <Link href="/about-us">
-            <Typography>Qui sommes nous ?</Typography>
+            <Typography> {t("AboutUs-1")}</Typography>
           </Link>
           <Divider />
           <Link href="/dev-ndi">
-            <Typography>Dev Nuit de l&apos;Info</Typography>
+            <Typography>{t("dev-ndi")}</Typography>
           </Link>
           <Divider />
           <a href="https://twitter.com/boutelierphili1">
@@ -101,7 +103,7 @@ const MainLayout: React.FC = ({ children }) => {
           </a>
         </Box>
         <FormControl>
-          <InputLabel id="language-label">Language</InputLabel>
+          <InputLabel id="language-label">{t("mainLayout-2")}</InputLabel>
           <Select
             labelId="language-label"
             id="language-select"
@@ -109,8 +111,8 @@ const MainLayout: React.FC = ({ children }) => {
             label="Language"
             onChange={handleLanguageChange}
           >
-            <MenuItem value="fr">Français</MenuItem>
-            <MenuItem value="en">English</MenuItem>
+            <MenuItem value="fr">{t("mainLayout-3")}</MenuItem>
+            <MenuItem value="en">{t("mainLayout-4")}</MenuItem>
           </Select>
         </FormControl>
         <Typography onClick={handleClickOpen} sx={{ marginLeft: "auto" }}>
@@ -123,52 +125,52 @@ const MainLayout: React.FC = ({ children }) => {
           <Divider />
           <div className="drawer-item">
             <Link href="/">
-              <Typography variant="h6">Accueil</Typography>
+              <Typography variant="h6">{t("home")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/rescuers">
-              <Typography variant="h6">Sauveteurs</Typography>
+              <Typography variant="h6">{t("mainLayout-5")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/missions">
-              <Typography variant="h6">Sauvetages</Typography>
+              <Typography variant="h6">{t("mainLayout-6")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/sea-trips">
-              <Typography variant="h6">Sorties en mer</Typography>
+              <Typography variant="h6">{t("mainLayout-7")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/harbor-services">
-              <Typography variant="h6">Services du port</Typography>
+              <Typography variant="h6">{t("mainLayout-8")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/maritime-savings">
-              <Typography variant="h6">Moyen maritimes</Typography>
+              <Typography variant="h6">{t("mainLayout-9")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/technics">
-              <Typography variant="h6">Techniques</Typography>
+              <Typography variant="h6">{t("mainLayout-10")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/history">
-              <Typography variant="h6">Historique</Typography>
+              <Typography variant="h6">{t("mainLayout-11")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/additional">
-              <Typography variant="h6">Compléments</Typography>
+              <Typography variant="h6">{t("mainLayout-12")}</Typography>
             </Link>
           </div>
           <div className="drawer-item">
             <Link href="/estaminet">
-              <Typography variant="h6">Estaminet</Typography>
+              <Typography variant="h6">{t("mainLayout-13")}</Typography>
             </Link>
           </div>
         </Container>

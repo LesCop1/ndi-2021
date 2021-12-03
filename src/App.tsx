@@ -11,11 +11,13 @@ import { initReactI18next, useTranslation } from "react-i18next";
 import Pitch from "pages/Pitch";
 import translationFr from "./translations/fr.json";
 import translationEn from "./translations/en.json";
+import translationAr from "./translations/ar.json";
 
 i18next.use(initReactI18next).init({
   resources: {
     en: { translation: translationEn },
     fr: { translation: translationFr },
+    ar: { translation: translationAr },
   },
   lng: "fr",
   fallbackLng: "fr",

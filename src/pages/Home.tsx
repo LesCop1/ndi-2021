@@ -16,18 +16,14 @@ const Home: React.FC = () => {
             {t("home")}
           </Typography>
           <br />
-          <Typography>
-            {t("home-1")}
-          </Typography>
+          <Typography>{t("home-1")}</Typography>
           <br />
-          <Typography>
-          {t("home-2")}
-          </Typography>
+          <Typography>{t("home-2")}</Typography>
         </Container>
         <br />
         <Container maxWidth="sm">
           <Typography className="quote" align="center">
-          {t("home-3")}
+            {t("home-3")}
           </Typography>
         </Container>
         <br />

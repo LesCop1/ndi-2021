@@ -15,9 +15,7 @@ const AboutUs: React.FC = () => {
             {t("AboutUs-1")}
           </Typography>
           <br />
-          <Typography>
-            {t("AboutUs-2")}
-          </Typography>
+          <Typography>{t("AboutUs-2")}</Typography>
           <br />
           <Typography>
             {t("AboutUs-3")}

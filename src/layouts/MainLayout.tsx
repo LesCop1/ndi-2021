@@ -25,11 +25,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./MainLayout.scss";
 import Search from "components/SearchBar";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import logo from "../images/logo.png";
 import twitterLogo from "../images/twitter-logo.png";
 import facebookLogo from "../images/facebook-logo.png";
 import gmailLogo from "../images/gmail-logo.png";
-import { useTranslation } from "react-i18next";
 
 const MainLayout: React.FC = ({ children }) => {
   const [drawerState, setDrawerState] = useState(false);

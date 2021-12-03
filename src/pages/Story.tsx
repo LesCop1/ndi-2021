@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Container, Divider, Typography } from "@mui/material";
 import "./Story.scss";
 
 import Rescuer from "components/Rescuer";
@@ -14,61 +14,21 @@ const Story = (props: unknown): JSX.Element => {
     <MainLayout>
       <div className="StoryLayout">
         <div className="HeaderLayout">
-          {params.storyid}
+          <Typography className="HeaderTitle" variant="h1" align="center">
+            Titre du récit
+          </Typography>
           <Rescuer />
           <Rescuee />
           <Waves />
         </div>
         <Container className="BodyLayout">
-          <Box>Texte du récit</Box>
+          <Typography variant="body1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam aliquam quo illo suscipit.
+            Vitae numquam, adipisci dolores soluta expedita explicabo optio libero, earum quae dolorum voluptate
+            mollitia sint vel.
+          </Typography>
           <Divider />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia
-            accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto
-            sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore
-            in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci,
-            provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi,
-            doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias
-            accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia
-            accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto
-            sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore
-            in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci,
-            provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi,
-            doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias
-            accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia
-            accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto
-            sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore
-            in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci,
-            provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi,
-            doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias
-            accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia
-            accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto
-            sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore
-            in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci,
-            provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi,
-            doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias
-            accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia
-            accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto
-            sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas alias inventore
-            in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi, doloribus debitis adipisci,
-            provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias accusantium repellat nisi,
-            doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptas alias inventore in, quidem mollitia accusantium. Iure molestias
-            accusantium repellat nisi, doloribus debitis adipisci, provident, eos nemo iusto sequi voluptates deleniti!
-          </p>
+          <Box>EE</Box>
         </Container>
       </div>
     </MainLayout>

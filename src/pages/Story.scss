@@ -3,6 +3,11 @@
     width: 100%;
     height: calc(60vh);
     background: radial-gradient(circle at bottom, #63bcff, #498bd5);
+
+    .HeaderTitle {
+      padding-top: 40px;
+      color: white;
+    }
   }
 
   .BodyLayout {

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Box, Container, Divider, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import "./Story.scss";
 
 import Rescuer from "components/Rescuer";
@@ -10,12 +11,14 @@ import MainLayout from "layouts/MainLayout";
 
 const Story = (props: unknown): JSX.Element => {
   const params = useParams();
+  const { t } = useTranslation();
+
   return (
     <MainLayout>
       <div className="StoryLayout">
         <div className="HeaderLayout">
           <Typography className="HeaderTitle" variant="h1" align="center">
-            Titre du récit
+            {t("story")}
           </Typography>
           <Rescuer />
           <Rescuee />

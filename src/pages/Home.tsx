@@ -1,5 +1,6 @@
+import MainLayout from "layouts/MainLayout";
 import React from "react";
 
-const Home = (): JSX.Element => <div>Homepage</div>;
+const Home: React.FC = () => <MainLayout>Bonjour</MainLayout>;
 
 export default Home;

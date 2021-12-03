@@ -1,0 +1,59 @@
+@import "../constants.scss";
+
+.SearchBar {
+  margin-left: auto;
+  text-align: center;
+
+  .holder {
+    position: relative;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-right: 2 * $spacing;
+    width: auto;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .icon-wrapper {
+      padding: 0 2 * $spacing;
+      height: 100%;
+      position: absolute;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .input-base {
+      color: inherit;
+
+      .MuiInputBase-input {
+        padding: $spacing;
+        padding-left: calc(1em + (4 * #{$spacing}));
+        width: 15ch;
+        transition: width 1s;
+
+        &:focus {
+          width: 20ch;
+        }
+      }
+    }
+  }
+
+  .data-result {
+    position: absolute;
+    margin-top: 5px;
+    border-radius: 6px;
+    margin-left: 1ch;
+    width: 20ch;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    .data-item {
+      display: block;
+      margin: $spacing;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../constants.scss";
+
+.MainLayout {
+  .title {
+    margin: $spacing;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+    }
+
+    .title-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 8px;
+    }
+  }
+}
+
+.toolbar-offset {
+  margin-top: $toolbar-offset;
+}
+
+.footer {
+  margin-top: auto;
+}

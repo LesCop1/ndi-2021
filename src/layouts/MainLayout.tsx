@@ -12,6 +12,7 @@ import {
   Drawer,
   IconButton,
   Link,
+  Paper,
   TextField,
   Toolbar,
   Typography,
@@ -66,7 +67,7 @@ const MainLayout: React.FC = ({ children }) => {
       </AppBar>
       <div className="toolbar-offset" />
       <div className="content">{children}</div>
-      <Container className="footer">
+      <Paper elevation={8} className="footer">
         <Box className="holder">
           <Link href="/about-us">
             <Typography>Qui sommes nous ?</Typography>
@@ -83,7 +84,7 @@ const MainLayout: React.FC = ({ children }) => {
         <Typography onClick={handleClickOpen} sx={{ marginLeft: "auto" }}>
           Connexion Admin
         </Typography>
-      </Container>
+      </Paper>
       <Drawer className="Drawer" anchor="left" open={drawerState} onClose={() => toggleDrawer()}>
         <Container>
           <img className="drawer-logo" src={logo} alt="logo" />

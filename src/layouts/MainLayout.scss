@@ -3,7 +3,7 @@
 .MainLayout {
   background: white !important;
   color: black !important;
-  
+
   .title {
     margin: $spacing;
     display: flex;
@@ -26,16 +26,17 @@
 }
 
 .toolbar-offset {
-  margin-top: $toolbar-offset;
+  margin-top: calc(#{$toolbar-offset} + 5px);
 }
 
 .content {
+  background-color: #e8f5ff;
   flex: 1 0 auto;
 }
 
 .footer {
   flex-shrink: 0;
-  padding-bottom: 2 * $spacing;
+  padding: 2 * $spacing;
 
   display: flex !important;
 

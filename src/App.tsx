@@ -8,6 +8,7 @@ import AboutUs from "pages/About-Us";
 import DevNDI from "pages/Dev-ndi";
 import i18next from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
+import Pitch from "pages/Pitch";
 import translationFr from "./translations/fr.json";
 import translationEn from "./translations/en.json";
 
@@ -39,6 +40,7 @@ const App = (): JSX.Element => {
         <Route path="/stories/:storyid" element={<Story />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/dev-ndi" element={<DevNDI />} />
+        <Route path="/pitch" element={<Pitch />} />
       </Routes>
     </Suspense>
   );

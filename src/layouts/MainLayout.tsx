@@ -1,12 +1,40 @@
 import React, { useState } from "react";
-import { AppBar, Box, Container, Divider, Drawer, IconButton, Link, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Divider,
+  Drawer,
+  IconButton,
+  Link,
+  TextField,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./MainLayout.scss";
 import Search from "components/SearchBar";
 import logo from "../images/logo.png";
+import twitterLogo from "../images/twitter-logo.png";
+import facebookLogo from "../images/facebook-logo.png";
+import gmailLogo from "../images/gmail-logo.png";
 
 const MainLayout: React.FC = ({ children }) => {
   const [drawerState, setDrawerState] = useState(false);
+  const [dialogState, setDialogState] = useState(false);
+
+  const handleClickOpen = (): void => {
+    setDialogState(true);
+  };
+
+  const handleClose = (): void => {
+    setDialogState(false);
+  };
 
   const toggleDrawer = (): void => {
     setDrawerState(!drawerState);
@@ -38,7 +66,24 @@ const MainLayout: React.FC = ({ children }) => {
       </AppBar>
       <div className="toolbar-offset" />
       <div className="content">{children}</div>
-      <Container className="footer">footer</Container>
+      <Container className="footer">
+        <Box className="holder">
+          <Link href="/about-us">
+            <Typography>Qui sommes nous ?</Typography>
+          </Link>
+          <Divider />
+          <Link href="/dev-ndi">
+            <Typography>Dev Nuit de l&apos;Info</Typography>
+          </Link>
+          <Divider />
+          <img className="logos" src={twitterLogo} alt="twitter logo" />
+          <img className="logos" src={facebookLogo} alt="facebook logo" />
+          <img className="logos" src={gmailLogo} alt="gmail logo" />
+        </Box>
+        <Typography onClick={handleClickOpen} sx={{ marginLeft: "auto" }}>
+          Connexion Admin
+        </Typography>
+      </Container>
       <Drawer className="Drawer" anchor="left" open={drawerState} onClose={() => toggleDrawer()}>
         <Container>
           <img className="drawer-logo" src={logo} alt="logo" />
@@ -54,13 +99,13 @@ const MainLayout: React.FC = ({ children }) => {
             </Link>
           </div>
           <div className="drawer-item">
-            <Link href="/sea-trips">
-              <Typography variant="h6">Sorties en mer</Typography>
+            <Link href="/missions">
+              <Typography variant="h6">Sauvetages</Typography>
             </Link>
           </div>
           <div className="drawer-item">
-            <Link href="/missions">
-              <Typography variant="h6">Sauvetages</Typography>
+            <Link href="/sea-trips">
+              <Typography variant="h6">Sorties en mer</Typography>
             </Link>
           </div>
           <div className="drawer-item">
@@ -95,6 +140,17 @@ const MainLayout: React.FC = ({ children }) => {
           </div>
         </Container>
       </Drawer>
+      <Dialog open={dialogState} onClose={handleClose}>
+        <DialogTitle>Connexion Admin</DialogTitle>
+        <DialogContent>
+          <TextField autoFocus margin="dense" id="name" label="Nom" fullWidth variant="standard" />
+          <TextField margin="dense" id="password" label="Mot de passe" type="password" fullWidth variant="standard" />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Annuler</Button>
+          <Button onClick={handleClose}>Se connecter</Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };

@@ -1,11 +1,15 @@
 .devNdiPage {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   .title {
     text-decoration: underline;
   }
   .image {
-    width: 50vw;
+    width: 70vw;
     height: auto;
     border-radius: 25px;
-
   }
 }

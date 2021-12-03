@@ -6,7 +6,9 @@ const Pitch: React.FC = () => (
   <MainLayout>
     <Container>
       <Typography variant="h3">Pitch</Typography>
-      <Typography>LIEN YT</Typography>
+      <Typography>
+        <a href="https://youtu.be/4HlDei-EIqE">https://youtu.be/4HlDei-EIqE</a>
+      </Typography>
     </Container>
   </MainLayout>
 );

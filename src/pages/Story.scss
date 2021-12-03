@@ -1,0 +1,11 @@
+.StoryLayout {
+  .HeaderLayout {
+    width: 100%;
+    height: calc(60vh);
+    background: radial-gradient(circle at bottom, #63bcff, #498bd5);
+  }
+
+  .BodyLayout {
+    padding: 100px 0px;
+  }
+}

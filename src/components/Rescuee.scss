@@ -1,0 +1,22 @@
+.Person {
+  position: absolute;
+  width: 192px;
+  height: 144px;
+  margin-left: 50px;
+  top: 50vh;
+  left: 50vw;
+  z-index: 999;
+  background: url("../images/man.png");
+  animation: rot 6s ease-in-out infinite;
+}
+
+@keyframes rot {
+  0%,
+  100% {
+    transform: translateY(0px) rotateZ(-2deg);
+  }
+
+  50% {
+    transform: translateY(10px) rotateZ(2deg);
+  }
+}

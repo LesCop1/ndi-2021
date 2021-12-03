@@ -1,6 +1,9 @@
 @import "../constants.scss";
 
 .MainLayout {
+  background: white !important;
+  color: black !important;
+  
   .title {
     margin: $spacing;
     display: flex;
@@ -32,15 +35,32 @@
 
 .footer {
   flex-shrink: 0;
+  padding-bottom: 2 * $spacing;
+
+  display: flex !important;
+
+  .holder {
+    display: flex;
+    flex-direction: row;
+
+    & * {
+      margin: 0 $spacing;
+    }
+  }
+
+  .logos {
+    margin: 0 $spacing;
+    height: 25px;
+  }
 }
 
 .Drawer {
   text-align: center;
 
   .drawer-logo {
-      margin: 2* $spacing 0;
-      width: 100px;
-      height: 100px;
+    margin: 2 * $spacing 0;
+    width: 100px;
+    height: 100px;
   }
 
   .drawer-item {

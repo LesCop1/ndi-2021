@@ -7,11 +7,11 @@
   .holder {
     position: relative;
     border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
     margin-right: 2 * $spacing;
     width: auto;
     &:hover {
-      background-color: rgba(255, 255, 255, 0.25);
+      background-color: rgba(0, 0, 0, 0.15);
     }
 
     .icon-wrapper {

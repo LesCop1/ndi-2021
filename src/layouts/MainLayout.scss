@@ -32,6 +32,23 @@
 
 .footer {
   flex-shrink: 0;
+  padding-bottom: 2 * $spacing;
+
+  display: flex !important;
+
+  .holder {
+      display: flex;
+      flex-direction: row;
+      
+      & * {
+          margin: 0 $spacing;
+      }
+  }
+
+  .logos {
+      margin: 0 $spacing;
+      height: 25px;
+  }
 }
 
 .Drawer {

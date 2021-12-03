@@ -5,6 +5,7 @@ import LoremIpsum from "pages/LoremIpsum";
 import Stories from "pages/Stories";
 import Story from "pages/Story";
 import AboutUs from "pages/About-Us";
+import DevNDI from "pages/Dev-ndi";
 
 const App = (): JSX.Element => (
   <Routes>
@@ -19,6 +20,7 @@ const App = (): JSX.Element => (
     <Route path="/stories/" element={<Stories />} />
     <Route path="/stories/:storyid" element={<Story />} />
     <Route path="/about-us" element={<AboutUs />} />
+    <Route path="/dev-ndi" element={<DevNDI />} />
   </Routes>
 );
 
